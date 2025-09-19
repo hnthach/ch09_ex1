@@ -1,0 +1,179 @@
+/* Global styles */
+body {
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-size: 95%;
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 20px;
+    background: linear-gradient(135deg, #e3f2fd, #ffffff);
+    color: #333;
+}
+
+/* Headings */
+h1 {
+    font-size: 1.8em;
+    color: #1565c0;
+    margin-bottom: 0.7em;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.4em;
+    color: #2e7d32;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+/* Form styles */
+label {
+    display: inline-block;
+    width: 7em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    color: #444;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 15em;
+    margin-left: 0.5em;
+    margin-bottom: 0.5em;
+    padding: 8px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border-color: #1565c0;
+    box-shadow: 0 0 5px rgba(21,101,192,0.4);
+    outline: none;
+}
+
+input[type="submit"] {
+    background-color: #1565c0;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    margin-left: 0.5em;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #0d47a1;
+    transform: translateY(-2px);
+}
+
+/* Tables */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    margin-top: 1em;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 10px 14px;
+    font-size: 0.95em;
+}
+
+th {
+    background-color: #1565c0;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Welcome message */
+.welcome {
+    text-align: left;
+    font-size: 1.4em;
+    margin: 20px 0;
+    color: #1565c0;       /* xanh dương đậm */
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Utility classes */
+.pad_top {
+    padding-top: 0.25em;
+}
+.margin_left {
+    margin-left: 0.5em;
+}
+.align_left {
+    text-align: left;
+}
+.align_right {
+    text-align: right;
+}
+
+/* Album list styles */
+.album-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 1.5em;
+}
+
+.album-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+}
+
+.album-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.album-card a {
+    text-decoration: none;
+    font-size: 1.05em;
+    font-weight: bold;
+}
+.rainbow-text {
+    background-image: linear-gradient(
+            to right,
+            red, orange, yellow, green, blue, indigo, violet
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400% auto;
+    animation: rainbow 4s linear infinite;
+    font-weight: bold;
+}
+
+@keyframes rainbow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+/* Mỗi album một màu */
+.album-blue a { color: #1565c0; }     /* xanh dương */
+.album-green a { color: #2e7d32; }    /* xanh lá */
+.album-purple a { color: #6a1b9a; }   /* tím */
+.album-orange a { color: #e65100; }   /* cam */
+
+.album-blue a:hover { color: #0d47a1; }
+.album-green a:hover { color: #1b5e20; }
+.album-purple a:hover { color: #4a148c; }
+.album-orange a:hover { color: #bf360c; }
